@@ -13,7 +13,7 @@ dotenv.config();
 // });
 
 const pool = mysql.createPool({
-  host: 'https://phpmyadmin.eu.ionos.host/db_structure.php?server=1&db=dbs14364186',
+  host: 'https://my.ionos.fr/webhosting/bb8d4570-55c1-41aa-a7f7-c306985af344/databases/31f6f4b9-fb62-4122-8a43-a98ad3b27d15/open',
   user: 'dbu2150858',
   password: 'GestionEcole2025',
   database: 'dbs14364186',
