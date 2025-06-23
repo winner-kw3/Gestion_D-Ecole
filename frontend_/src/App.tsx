@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch('http://localhost:3001/api/auth/me', {
+        const res = await fetch('https://gestion-d-ecole.onrender.com/api/auth/me', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -20,7 +20,7 @@ export default function AdminPanel({ token }: AdminPanelProps) {
 
   const fetchUsers = async () => {
     try {
-      const res = await fetch('http://localhost:3001/api/users', {
+      const res = await fetch('https://gestion-d-ecole.onrender.com/api/users', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -53,7 +53,7 @@ export default function AdminPanel({ token }: AdminPanelProps) {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:3001/api/auth/register', {
+      const response = await fetch('https://gestion-d-ecole.onrender.com/api/auth/register', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ export default function AdminPanel({ token }: AdminPanelProps) {
     if (!window.confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')) return;
 
     try {
-      const response = await fetch(`http://localhost:3001/api/users/${userId}`, {
+      const response = await fetch(`https://gestion-d-ecole.onrender.com/api/users/${userId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

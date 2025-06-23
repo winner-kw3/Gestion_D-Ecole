@@ -72,8 +72,8 @@ export default function StudentForm({ token, fetchStudents, editing = false, stu
 
     try {
       const url = editing && student
-        ? `http://localhost:3001/api/etudiants/${student.id}`
-        : `http://localhost:3001/api/etudiants`;
+        ? `https://gestion-d-ecole.onrender.com/api/etudiants/${student.id}`
+        : `https://gestion-d-ecole.onrender.com/api/etudiants`;
 
       const method = editing ? 'PUT' : 'POST';
 
