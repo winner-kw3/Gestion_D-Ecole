@@ -1,0 +1,21 @@
+{
+  "name": "frontend_lourd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "concurrently \"npm run start-react\" \"wait-on http://localhost:5174 && electron ./dist/main.js\"",
+    "start-react": "cd ../frontend_ && npm start"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "concurrently": "^9.1.2",
+    "electron": "^36.5.0",
+    "typescript": "^5.8.3",
+    "wait-on": "^8.0.3"
+  }
+}

@@ -24,7 +24,7 @@ export default function StudentManagement({ token }: StudentManagementProps) {
   const fetchStudents = async () => {
     try {
       setIsLoading(true);
-      const res = await fetch('https://gestion-d-ecole.onrender.com/api/etudiants', {
+      const res = await fetch('http://localhost:3001/api/etudiants', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -45,7 +45,7 @@ export default function StudentManagement({ token }: StudentManagementProps) {
     if (!window.confirm("Êtes-vous sûr de vouloir supprimer cet étudiant ?")) return;
     
     try {
-      await fetch(`https://gestion-d-ecole.onrender.com/api/etudiants/${id}`, {
+      await fetch(`http://localhost:3001/api/etudiants/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });
