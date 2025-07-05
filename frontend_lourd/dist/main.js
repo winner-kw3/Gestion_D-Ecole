@@ -46,7 +46,7 @@ function createWindow() {
         }
     });
     // En mode dev, on charge le React local sur localhost:3000
-    win.loadURL('http://localhost:5174');
+    win.loadURL('http://localhost:3000');
 }
 electron_1.app.whenReady().then(() => {
     createWindow();
