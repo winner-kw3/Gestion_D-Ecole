@@ -50,7 +50,7 @@
 
 ## Prérequis
 
-- [Node.js](https://nodejs.org/) >= 18.x
+- [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/)
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
