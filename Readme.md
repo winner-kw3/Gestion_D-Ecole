@@ -26,6 +26,26 @@
 - **docker-compose.yml** : Orchestration des services (frontend, backend, base de données)
 - **Makefile** : Automatisation des tâches courantes
 
+
+                        ┌────────────────────────┐
+                        │    Base de données     │
+                        │        MySQL           │
+                        └─────────▲──────────────┘
+                                  │
+                                  │
+                        ┌─────────┴──────────────┐
+                        │     API Backend        │
+                        │    Node.js + Express   │
+                        │     (REST)  │
+                        └─────────▲──────────────┘
+                  ┌────────────── ┼──────────────┐
+                  │                              │
+        ┌─────────┴─────────┐        ┌───────────┴────────────┐
+        │  Frontend Web     │        │    Client Lourd        │
+        │ React  TypeScript │         │    Electron Js         │
+        └───────────────────┘        └────────────────────────┘
+
+
 ---
 
 ## Prérequis

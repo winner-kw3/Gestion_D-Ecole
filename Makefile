@@ -1,5 +1,5 @@
 # Variables
-FRONTEND_DOCKER=docker-compose -f docker-compose.yml
+FRONTEND_DOCKER=docker compose 
 MYSQL_CONTAINER=mysql_db
 MYSQL_INIT=mysql-init/init.sql
 
@@ -8,7 +8,7 @@ MYSQL_INIT=mysql-init/init.sql
 all: build
 
 build:
-	cd frontend_ && npm install && npm run build
+#cd frontend_ && npm install && npm run build
 	cd frontend_lourd && npm install && npm run build
 
 docker-up:
@@ -21,7 +21,7 @@ docker-restart:
 	$(FRONTEND_DOCKER) restart
 
 db-init:
-	docker exec -i $(MYSQL_CONTAINER) mysql -u root -pYOUR_PASSWORD gestion_ecole < $(MYSQL_INIT)
+	docker exec -i $(MYSQL_CONTAINER) mysql -u root -p_PASSWORD gestion_ecole < $(MYSQL_INIT)
 
 electron:
 	cd frontend_lourd && npx electron dist/main.js
